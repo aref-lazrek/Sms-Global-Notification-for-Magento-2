@@ -13,5 +13,5 @@ php bin/magento setup:upgrade
 php bin/magento setup:di:compile  
 php bin/magento cache:clean  
 
-go to stores/configuration and enter api credentials
+go to stores/configuration and enter api credentials  
 enable notification and add a message
