@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+{{License}}
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="GlobalSms_Notify::globalsms" title="GlobalSms" module="GlobalSms_Notify" sortOrder="11" resource="GlobalSms_Notify::globalsms"/>
+        <add id="GlobalSms_Notify::globalsms_head" title="Settings" module="GlobalSms_Notify" sortOrder="40"
+             parent="GlobalSms_Notify::globalsms" resource="GlobalSms_Notify::globalsms"/>
+        <add id="GlobalSms_Notify::config" title="Configuration" module="GlobalSms_Notify" sortOrder="50"
+             action="adminhtml/system_config/edit/section/globalsms_notify_configuration"
+             resource="GlobalSms_Notify::notify" parent="GlobalSms_Notify::globalsms_head" />
+    </menu>
+</config>

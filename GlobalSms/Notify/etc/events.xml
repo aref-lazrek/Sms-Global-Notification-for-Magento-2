@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_submit_all_after">
+        <observer name="globalsms_notify_observer_new_order" instance="GlobalSms\Notify\Observer\NewOrder"/>
+    </event>
+    <event name="sales_order_save_after">
+        <observer name="globalsms_notify_observer_order_cancelled" instance="GlobalSms\Notify\Observer\OrderCancelled"/>
+        <observer name="globalsms_notify_observer_order_hold" instance="GlobalSms\Notify\Observer\OrderHold"/>
+        <observer name="globalsms_notify_observer_order_un_hold" instance="GlobalSms\Notify\Observer\OrderUnHold"/>
+    </event>
+    <event name="sales_order_invoice_pay">
+        <observer name="globalsms_notify_observer_invoice_pay" instance="GlobalSms\Notify\Observer\InvoicePay"/>
+    </event>
+    <event name="customer_register_success">
+        <observer name="globalsms_notify_observer_register_success" instance="GlobalSms\Notify\Observer\Registration"/>
+    </event>
+</config>
